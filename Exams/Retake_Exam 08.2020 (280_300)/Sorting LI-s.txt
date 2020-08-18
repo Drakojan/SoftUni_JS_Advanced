@@ -1,0 +1,11 @@
+function sorting(where) {
+      let items = where.getElementsByTagName('li');
+      if (items) {
+         let sorted = [].slice.call(items).sort((a, b) => a.textContent.localeCompare(b.textContent));
+         where.innerHTML = '';
+ 
+         sorted.forEach(x => where.appendChild(x));
+      }
+   }
+
+
